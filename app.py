@@ -29,7 +29,7 @@ def transform_text(text):
     for i in text:
         if i not in stopwords.words('english') and i not in string.punctuation:
             y.append(i)
-
+            
 
     # stemming
     text = y[:]
