@@ -11,6 +11,28 @@ from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
 from sklearn.metrics import accuracy_score,confusion_matrix, precision_score 
 
 
+
+
+
+import nltk
+
+# Ensure the nltk_data folder in your project directory is used
+nltk.data.path.append("./nltk_data")
+
+# Download 'punkt' tokenizer data
+nltk.download('punkt', download_dir='./nltk_data')
+
+
+
+
+
+
+
+
+
+
+
+
 # updated function
 
 def transform_text(text):
@@ -29,7 +51,7 @@ def transform_text(text):
     for i in text:
         if i not in stopwords.words('english') and i not in string.punctuation:
             y.append(i)
-            
+
 
     # stemming
     text = y[:]
