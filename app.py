@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import nltk
-nltk.download('punkt')
+nltk.data.path.append('./nltk_data')
 import string
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
@@ -9,25 +9,6 @@ ps = PorterStemmer()
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
 from sklearn.metrics import accuracy_score,confusion_matrix, precision_score 
-
-
-
-
-
-import nltk
-
-# Ensure the nltk_data folder in your project directory is used
-nltk.data.path.append("./nltk_data")
-
-# Download 'punkt' tokenizer data
-nltk.download('punkt', download_dir='./nltk_data')
-
-
-
-
-
-
-
 
 
 
