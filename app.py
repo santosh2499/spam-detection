@@ -1,11 +1,13 @@
 import streamlit as st
 import pickle
 import nltk
+nltk.download('punkt')
 import string
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
 
+# updated function
 
 def transform_text(text):
     text = text.lower()
@@ -30,7 +32,7 @@ def transform_text(text):
     y.clear()
 
     for i in text:
-        y.append(ps.stem(i));
+        y.append(ps.stem(i))
     return " ".join(y)
 
 
