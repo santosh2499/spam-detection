@@ -5,6 +5,11 @@ nltk.data.path.append('./nltk_data')
 import string
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
+ps = PorterStemmer()
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB
+from sklearn.metrics import accuracy_score,confusion_matrix, precision_score 
+
 
 # Custom CSS for styling
 st.markdown("""
